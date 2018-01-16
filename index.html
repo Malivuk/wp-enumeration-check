@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="wec.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:700,400|Quicksand" rel="stylesheet">
+  </head>
+  <body>
+
+    <header>
+      <form class="">
+        <label for="to-check">Is your website safe?</label>
+        <input id="to-check" type="text" name="" value="" placeholder="https://myblog.com">
+        <button id="start-check" type="button" name="button">SCAN</button>
+      </form>
+      <div id="feedback">
+      </div>
+    </header>
+
+    <main>
+      <article class="">
+        <h1>What is this tool?</h1>
+        <p>
+          Wordpress allows anyone to list all usernames of your website.
+          It is as simple as running a custom script or using the
+          <a href="https://developer.wordpress.org/rest-api/reference/users/">WP REST API</a>.
+          This tool aims to check if your website is protected against such risk.
+        </p>
+      </article>
+
+      <article class="">
+        <h1>Why should I care?</h1>
+        <p>
+          First, it will help hackers to gain admin access during <b>brute force</b> attacks.
+          Also consider that <b>data privacy</b> is a serious business (some members might use their email address as their ID).
+          Lastly, you don't want to give extra and free information to your competitors, if any.
+        </p>
+      </article>
+
+      <article class="">
+        <h1>Who is concerned?</h1>
+        <p>
+          In 2017, <a href="https://w3techs.com/">almost 30%</a>
+          of websites are using Wordpress as a CMS, while Woocommerce claimed
+          <a href="https://woocommerce.com/2015/10/woocommerce-10m-30-percent/">powering 30% of online stores</a>
+          back in 2015. Chances are you already used one of them as a developer or a business owner.
+         </p>
+      </article>
+
+      <article class="">
+        <h1>How can I fix this?</h1>
+        <p>
+          A simple, quick and free action you can take is to install
+          a plugin called <a href="https://wordpress.org/plugins/stop-user-enumeration/">Stop User Enumeration</a>.
+          Keep in mind that you can get way more information
+          with <a href="https://wpscan.org/">appropriate tools</a>,
+          this website has been designed to sensitize people to common security exploits.
+        </p>
+      </article>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/Malivuk/wp-enumeration-check">Project repository</a>
+        <a href="https://wpscan.org/">WPScan</a>
+        <a href="https://wordpress.org/plugins/stop-user-enumeration/">Stop User Enumeration plugin</a>
+        <a href="https://codex.wordpress.org/Hardening_WordPress">WP security guidelines</a>
+      </nav>
+    </footer>
+
+    <script type="text/javascript" src="wec.js"></script>
+  </body>
+</html>
