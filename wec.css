@@ -44,6 +44,7 @@ input::placeholder {
   color: #fff;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  font-style: italic;
 }
 
 input:focus{
@@ -78,13 +79,53 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 1.5em 1em;
-  z-index: 2;
   text-align: center;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  min-height: 96.5px;
+}
+
+form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5em 1em;
   background: #43cea2;
   background: -webkit-linear-gradient(to right, #185a9d, #43cea2);
   background: linear-gradient(to right, #185a9d, #43cea2);
+  z-index: 2;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#form-result {
+  padding: 1.5em 1em;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  z-index: 3;
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  background: #185a9d;
+  background: -webkit-linear-gradient(to right, #43cea2, #185a9d);
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#form-result p {
+  display: inline;
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+.come {
+  left: 0 !important;
+}
+
+.go {
+  left: -100% !important;
 }
 
 main {

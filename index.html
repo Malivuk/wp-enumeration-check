@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" type="text/css" href="wec.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:700,400|Quicksand" rel="stylesheet">
@@ -9,12 +10,14 @@
   <body>
 
     <header>
-      <form class="">
+      <form id="form-check">
         <label for="to-check">Is your website safe?</label>
         <input id="to-check" type="text" name="" value="" placeholder="https://myblog.com">
         <button id="start-check" type="button" name="button">SCAN</button>
       </form>
-      <div id="feedback">
+      <div id="form-result">
+        <p id="feedback"></p>
+        <button type="button" name="button" id="new-check">TRY AGAIN</button>
       </div>
     </header>
 

@@ -1,8 +1,11 @@
 'use strict';
 
 (function () {
-  var apiResponse = document.getElementById('feedback');
+  var defaultform = document.getElementById('form-check');
   var scanButton = document.getElementById('start-check');
+  var Resulttext = document.getElementById('feedback');
+  var checkAgain = document.getElementById('new-check');
+  var fomResult = document.getElementById('form-result');
   var userInput = document.getElementById('to-check');
 
   function toggleSpinner(state) {
@@ -13,8 +16,19 @@
     }
   }
 
+  function showResultBanner() {
+    defaultform.classList.add('go');
+    fomResult.classList.add('come');
+  }
+
+  function showFormBanner() {
+    defaultform.classList.remove('go');
+    fomResult.classList.remove('come');
+  }
+
   function updateUi(message) {
-    apiResponse.innerHTML = message;
+    Resulttext.innerHTML = message;
+    showResultBanner();
   }
 
   function checkUrl(url, endpoint) {
@@ -28,14 +42,14 @@
 
     }).then(function(r) {
       toggleSpinner(false);
-      updateUi(r.length + ' user name(s) have been found, consider installing https://wordpress.org/plugins/stop-user-enumeration/');
+      updateUi(r.length + ' username(s) are accessible to public 😷');
 
     }).catch(function(err) {
       if(endpoint === '/wp-json/wp/v2/users') {
         checkUrl(url, '?author=1')
       } else {
         toggleSpinner(false);
-        updateUi('This website seems to be safe, congrats. You can perform advanced scan with https://wpscan.org/');
+        updateUi('Your website seems to be safe, congrats 😌');
       }
     });
   }
@@ -58,4 +72,5 @@
   }
 
   scanButton.onclick = handleUserInput;
+  checkAgain.onclick = showFormBanner;
 })();
